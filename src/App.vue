@@ -5,7 +5,7 @@ import Header from './components/Content/Header/Header.vue'
 
 <template>
   <div class="app">
-    <Header></Header>
+    <!-- <Header></Header> -->
     <Experience></Experience>
   </div>
 

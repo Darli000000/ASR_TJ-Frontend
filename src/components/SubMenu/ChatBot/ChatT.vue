@@ -1,13 +1,13 @@
 <template>
     <div className="voice_chat">
         <!-- 开始聊天 -->
-        <!-- <div v-if="!onReco" className="voice_chat_wrapper">
+        <div v-if="!onReco" className="voice_chat_wrapper">
           <div className="voice_chat_btn"
               @click="startRecorder()"
           ></div>
           <div className="voice_chat_btn_title">点击开始聊天</div>
           <div className="voice_chat_btn_prompt">聊天前请允许浏览器获取麦克风权限</div>
-        </div> -->
+        </div>
           <!-- 结束聊天 -->
         <div className="voice_chat_dialog_wrapper">
             <div className="dialog_box" >
@@ -93,8 +93,8 @@ export default {
         startRecorder(){
           this.allResultList = []
           if(!this.onReco){
-            this.asrResult = this.speakingText
-            this.resumeRecordOnline()
+            this.asrResult = this.speakingText;
+            this.resumeRecordOnline();
             recorder.start().then(() => {
               setInterval(() => {
                 // 1.07版本不再实现 getNextData函数，只做了声明
@@ -111,13 +111,13 @@ export default {
           this.onReco = true
           // 初始化NLP
           this.initNLP()
-        } else {
-          // 结束录音
-          recorder.stop()
-          this.onReco = false
-          this.asrResult = ""
-          this.stopRecordOnline()
-        }
+          } else {
+            // 结束录音
+            recorder.stop()
+            this.onReco = false
+            this.asrResult = ""
+            this.stopRecordOnline()
+          }
         },
 
         // 录音数据上传

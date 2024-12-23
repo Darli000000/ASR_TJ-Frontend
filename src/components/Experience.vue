@@ -6,6 +6,7 @@ import ASRT from './SubMenu/ASR/ASRT.vue'
 import TTST from './SubMenu/TTS/TTST.vue'
 import VPRT from './SubMenu/VPR/VPRT.vue'
 import IET from './SubMenu/IE/IET.vue'
+import EmotionT from './SubMenu/Emotion/EmotionT.vue'
 
 </script>
 
@@ -13,7 +14,7 @@ import IET from './SubMenu/IE/IET.vue'
     <div className="experience">
       <div className="experience_wrapper">
         <div className="experience_title">
-          功能体验
+          语音情感小助手
         </div>
         <div className="experience_describe">
           体验前，请允许浏览器获取麦克风权限
@@ -26,20 +27,11 @@ import IET from './SubMenu/IE/IET.vue'
             <el-tab-pane label="语音聊天" key="1">
               <ChatT></ChatT>
             </el-tab-pane>
-            <el-tab-pane label="声纹识别" key="2">
-             <VPRT></VPRT>
-            </el-tab-pane>
-            <el-tab-pane label="语音识别" key="3">
-            <ASRT></ASRT>
-            </el-tab-pane>
-            <el-tab-pane label="语音合成" key="4">
-            <TTST></TTST>
-            </el-tab-pane>
-            <el-tab-pane label="语音指令" key="5">
-            <IET></IET>
-            </el-tab-pane>
-            <el-tab-pane label="语音情感助手" key="6">
+            <el-tab-pane label="语音情感助手" key="2">
               <ChatS></ChatS>
+            </el-tab-pane>
+            <el-tab-pane label="情感分析" key="3">
+            <EmotionT></EmotionT>
             </el-tab-pane>
           </el-tabs>
         </div>
